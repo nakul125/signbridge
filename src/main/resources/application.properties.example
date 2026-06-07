@@ -1,0 +1,4 @@
+spring.datasource.url=jdbc:postgresql://localhost:5432/signbridge_db
+spring.datasource.username=postgres
+spring.datasource.password=YOUR_PASSWORD_HERE
+jwt.secret=YOUR_JWT_SECRET_HERE

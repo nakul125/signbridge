@@ -9,5 +9,4 @@ public class SigmbridgeBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(SigmbridgeBackendApplication.class, args);
     }
-
 }
