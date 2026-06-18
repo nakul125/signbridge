@@ -16,7 +16,7 @@ public class UserResponse {
     private LocalDateTime createdAt;
     private boolean isActive;
 
-    public static UserResponse from(User user) {
+    public static UserResponse fromUser(User user) {
         return UserResponse.builder()
                 .id(user.getId())
                 .name(user.getName())
