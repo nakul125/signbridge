@@ -15,7 +15,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public void registerUser(RegisterRequest request){
+    public UserResponse registerUser(RegisterRequest request){
         if(userRepository.existsByEmail(request.getEmail())){
             throw new DuplicateResourceException("Email already exists" + request.getEmail());
         }
@@ -31,5 +31,7 @@ public class UserService {
                 .build();
 
         User savedUser = userRepository.save(user);
+
+        return UserResponse.fromUser(savedUser);
     }
 }
