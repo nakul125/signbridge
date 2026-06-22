@@ -28,8 +28,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     )
     Optional<User> findActiveUserByEmail(@Param("email") String email,@Param("isActive") boolean isActive);
 
-    @Query(
-            "SELECT COUNT(u) FROM User u WHERE u.Role = :Admin"
-    )
+    @Query("SELECT COUNT(u) FROM User u WHERE u.role = 'ADMIN'")
     long countAdmins();
 }
